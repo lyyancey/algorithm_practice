@@ -22,6 +22,9 @@
 
 2.[LeetCode231.2的幂](./../C/231.c)
 
+3.[LeetCode201数字范围按位与](../C/201.c)
+
+4.[LeetCode268丢失的数字](../C/268.c)
 ## 参考资料:
 
 [fucking-algorithm](https://github.com/labuladong/fucking-algorithm)

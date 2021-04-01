@@ -1,2 +1,2 @@
 line = "public char getColor ( ) throws java.io.IOException { VAR_1 . METHOD_1 ( ( STRING_1 + \"\n\" ) ) ; java.lang.String response = VAR_2 . METHOD_2 ( ) ; java.lang.System.out.println ( response ) ; return response . METHOD_3 ( 0 ) ; }"
-print(len(line.split()))
+print(len(line.split()#45677

@@ -39,12 +39,14 @@ int lengthOfLongestSubstring(char * s){
     int rs = 0;
     for(int i = 0;i<len;i++)set[i]='\0';
     for(int i=0;i<len;i++){
-        if(r!=0)r++;
+        if(i!=0){
+           set.remove(s[i]);
+        }
         for((rk+1<len)&&(!set.contains(set.contains(rk+1)))){
             set.add(s[rk+1]);
             rk++;
         }
-        if(rs>(rk-r+1))rs = rk-r+1;
+        if(rs>(rk-i+1))rs = rk-i+1;
     }
     return rs;
 }

@@ -3,10 +3,7 @@
  * 这是一个main()函数
 **/
 int main(){
-    int k = 1,l = 1;
-    k ^= l;
-    l ^= k;
-    k ^= l;
-    printf("%d, %d\n", k, l);
+    int x=1,y=2; 
+    printf("%d\n", x/y);
     return 0;
 }

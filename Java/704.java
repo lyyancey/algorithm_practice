@@ -54,6 +54,42 @@ class Problem704 {
                 left = mid+1;//将搜索边界调整为[mid+1, right]
             }
         }
-        return left-1;
+        //检查出界的情况
+        if(left>nums.length||nums[left]!=target)return -1;
+        return left;
+    }
+    //寻找右侧边界，开区间的例子
+    public int right_bound(int nums, int target){
+        int right = nums.length, left = 0;//搜索区间为[left, right)
+        int mid = 0;
+        while(left<right){
+            mid = left + (right-left)/2;
+            if(nums[mid]==target){
+                left = mid+1;
+            }else if(nums[mid] < target){
+                left = mid + 1;
+            }else if(nums[mid]>target){
+                right = mid;
+            }
+        }
+        
+        return left-1;//这里由于mid = left+1 所以最后要减去一个一，至于为什么是left，是因为结束条件是left==right所以都是一样的
+    }
+    //寻找右侧边界，闭区间的例子
+    public int right_bound_close(int[] nums, int target){
+        int right = nums.length-1,left = 0;
+        int mid = 0;
+        while(right<=left){
+            mid = left + (right-left)/2;
+            if(nums[mid]==target){
+                left = mid+1;
+            }else if(nums[mid]<target){
+                left = mid+1;
+            }else if(nums[mid]>target){
+                right = mid-1;
+            }
+        }
+        if(right<0||nums[right]!=target)return -1;
+        return right; //这里返回right是由于结束条件是left>right
     }
 }

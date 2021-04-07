@@ -16,6 +16,23 @@ class Problem3 {
         }
         return res;
     }
+    public int lengthOfLongestSubstring2(String s) {
+        int res = 0, left = 0, right = 0;
+        Map<Character, Integer> windows = new HashMap<Character, Integer>();
+        while(right<s.length()){
+            char c = s.charAt(right);
+            windows.put(c, windows.getOrDefault(c, 0)+1);
+            right++;
+            while(windows.get(c)>1){
+                char c1 = s.charAt(left);
+                windows.put(c1, windows.get(c1)-1);
+                left++;
+            }
+            res = res > right-left?res :right-left;
+        }
+        return res;
+
+    }
     public static void main(String[] args){
         Problem3 s = new Problem3();
         int x = s.lengthOfLongestSubstring("pwwkew");

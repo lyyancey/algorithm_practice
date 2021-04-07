@@ -13,7 +13,7 @@ class Problem80{
              * 即：slow指针加一，无论fast指针指向的元素保留与否，都代表fast指针指向的元素被处理过了，所以fast指针都会加一
              * 最后返回slow的大小
              */
-             if(nums[slow-2]!=nums[fast]);                       
+             if(nums[slow-2]!=nums[fast]){                     
                 nums[slow] = nums[fast];
                 slow++;
              }

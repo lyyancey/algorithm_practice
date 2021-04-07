@@ -6,13 +6,14 @@ class Problem3 {
         int res = 0,rk =0;
         for(int i=0;i<n;i++){
             if(i!=0){
-                set.remove(s.charAt(i-1));
+                set.remove(s.charAt(i-1));//这里也是滑动窗口，i相当于慢指针
             }
-            while(rk<n&&!set.contains(s.charAt(rk))){
+            while(rk<n&&!set.contains(s.charAt(rk))){//rk相当于快指针只要rk指向的字符不在当前的集合内就把它加进去，
+            //直至rk指向的元素与集合中的元素有重复，这时候快慢指针之间的距离就是无重复字符的子串
                 set.add(s.charAt(rk));
                 ++rk;
             }
-            res = res>(rk-i)?res:(rk-1);
+            res = res>(rk-i)?res:(rk-i);
         }
         return res;
     }

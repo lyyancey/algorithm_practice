@@ -1,5 +1,6 @@
 class Problem88 {
     public void merge(int[] nums1, int m, int[] nums2, int n) {
+        //这其实就是一个从后向前的归并算法
         int t = m+n-1;
         int i=m-1,j=n-1;
         while(i>=0||j>=0){

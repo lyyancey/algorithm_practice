@@ -20,16 +20,23 @@ class Problem3 {
     public int lengthOfLongestSubstring2(String s) {
         int res = 0, left = 0, right = 0;
         Map<Character, Integer> windows = new HashMap<Character, Integer>();
-        while(right<s.length()){
-            char c = s.charAt(right);
+        while(right<s.length()){//right 为快指针
+            char c = s.charAt(right);//检查快指针指向的字符
+            //记录快指针指向的字符在滑动窗口中出现的频率
             windows.put(c, windows.getOrDefault(c, 0)+1);
+            //滑动窗口向右移动一个字符
             right++;
+            //检查滑动窗口中，快指针指向的字符出现的频率
+            //如果大于一说明有重复的字符出现
             while(windows.get(c)>1){
                 char c1 = s.charAt(left);
+                //此时将左指针指向的字符，从统计字符中移除
                 windows.put(c1, windows.get(c1)-1);
+                //左指针向右移动一个字符，重复此过程，直至右指针指向的字符在滑动窗口中出现的频率小于等于一
+                //此时滑动窗口中，就是一个无重复字符的子串
                 left++;
             }
-            res = res > right-left?res :right-left;
+            res = res > right-left?res : right-left;//记录最短子串
         }
         return res;
 

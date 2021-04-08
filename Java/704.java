@@ -59,7 +59,7 @@ class Problem704 {
         return left;
     }
     //寻找右侧边界，开区间的例子
-    public int right_bound(int nums, int target){
+    public int right_bound(int[] nums, int target){
         int right = nums.length, left = 0;//搜索区间为[left, right)
         int mid = 0;
         while(left<right){

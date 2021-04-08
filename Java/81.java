@@ -2,6 +2,7 @@ class Problem81 {
     public boolean search(int[] nums, int target) {
         int n = nums.length;
         int right1=0,left2=1;
+        //有一点点蠢，需要改进一下
         while(left2<n){
             if(nums[left2]<nums[right1])break;
             left2++;

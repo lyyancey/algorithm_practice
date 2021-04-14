@@ -32,6 +32,7 @@ class Problem56 {
                 s[index][1] = Math.max(interval[1], s[index][1]);
             }
         }
+        //此时index是指向最后合并后区间，所以长度是index+1
         return Arrays.copyOf(s, index+1);
 
     }

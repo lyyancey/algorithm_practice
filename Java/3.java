@@ -36,6 +36,7 @@ class Problem3 {
                 //此时滑动窗口中，就是一个无重复字符的子串
                 left++;
             }
+            //记录无重复子串的最大长度
             res = res > right-left?res : right-left;//记录最短子串
         }
         return res;

@@ -47,6 +47,10 @@ class Problem220 {
         return false;
     }
     private Long getIndx(long u, long size){
+        /**
+         * 这里计算的是桶的编号，size加一是为了正确的分桶，当u为复数的时候因为0已经归属为正数了
+         * 所以复数要整体向右偏移一位，而这时复数的第一个桶已经被正数占用了，桶的编号要向左偏移一位
+         */
         return u >= 0 ? u/size:(u+1)/size-1;
     }
 }

@@ -1,6 +1,7 @@
 #include<stdio.h>
 /**
  * 这是一个main()函数
+ * test
 **/
 int main(){
     int x=1,y=2; 

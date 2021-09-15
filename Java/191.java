@@ -1,4 +1,4 @@
-public class Solution {
+class Problem191 {
     public int hammingWeight(int n) {
         int k = 0;
         while(n != 0){

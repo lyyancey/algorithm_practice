@@ -1,4 +1,4 @@
-import java.util.Map;
+import java.util.*;
 
 class Problem137{
     public int singleNumber(int[] nums) {

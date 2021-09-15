@@ -1,28 +1,25 @@
 class Problem8{
-    public int myAtoi(String s) {
-        int sign = 1;
-        int res = 0;
-        int m = s.length();
-        int i = 0;
-        while(i<m&&s.charAt(i)==' '){
+    public int myAtoi(Sting s){
+        int res=0,n=s.length(),sign=1,i=0;
+        while(i<n&&s.charAt(i)==' '){
             i++;
         }
         int start = i;
-        for(;i<m;i++){
+        for(;i<n;i++){
             char c = s.charAt(i);
             if(i==start&&c=='+'){
                 sign = 1;
-            }else if(i==start && c =='-'){
-                sign = -1;
+            }else if(i==start&&c=='-'){
+                sign=-1;
             }else if(Character.isDigit(c)){
-                int num = c - '0';
-                if(res>Integer.MAX_VALUE/10||(res==Integer.MAX_VALUE/10&&num>Integer.MAX_VALUE%10)){
-                    return Integer.MAX_VALUE;
+                int num = (c - '0')*sign;
+                if(res>214748364||(res==214748364&&num>7)){
+                    return 2147483647;
                 }
-                if(res<Integer.MIN_VALUE/10||(res==Integer.MIN_VALUE/10&&num<Integer.MIN_VALUE%10)){
-                    return Integer.MIN_VALUE;
+                if(res<-214748364||(res==-214748364&&num<-8)){
+                    return -2147483648;
                 }
-                res = res*10 + sign*num;
+                res = res*10+num;
             }else{
                 break;
             }

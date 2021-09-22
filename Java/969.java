@@ -1,8 +1,6 @@
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.utils.*;
+import java.util.*;
 class Problem969 {
-    LinkedList<Integer> res = new ArrayList<>();
+    List<Integer> res = new ArrayList<>();
     public List<Integer> pancakeSort(int[] arr){
         sort(arr, arr.length);
         return res;

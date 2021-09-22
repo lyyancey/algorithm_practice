@@ -1,4 +1,3 @@
-import java.util.*;
 class Problem1720 {
     public int[] decode(int[] encoded, int first) {
         int[] list = new int[encoded.length+1];

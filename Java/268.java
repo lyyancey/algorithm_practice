@@ -7,7 +7,7 @@ class Solution {
         }
         return res;
     }
-    public int missingNumber(int[] nums){
+    public int missingNumber0(int[] nums){
         int res = 0;
         for(int i = 1;i<=nums.length;i++){
             res ^= i;

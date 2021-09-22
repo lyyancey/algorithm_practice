@@ -1,5 +1,5 @@
 class Problem8{
-    public int myAtoi(Sting s){
+    public int myAtoi(String s){
         int res=0,n=s.length(),sign=1,i=0;
         while(i<n&&s.charAt(i)==' '){
             i++;

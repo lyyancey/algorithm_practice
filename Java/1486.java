@@ -1,5 +1,3 @@
-import java.rmi.server.RMIClassLoader;
-
 class Problem1486{
     public int xorOperation(int n, int start) {
         int res=0;

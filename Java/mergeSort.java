@@ -1,4 +1,4 @@
-class Solution{
+class MergeSort{
     private void merge(int[] rank, int lo, int mi, int hi){
         int rb = mi - lo;
         int rc = hi - mi;
@@ -23,7 +23,7 @@ class Solution{
         merge(rank, lo, mid, hi);
     }
     public static void main(String[] args){
-        Solution s = new Solution();
+        MergeSort s = new MergeSort();
         int[] A = new int[]{1,3,5,4,2,7,6,8,9,0};
         s.mergeSort(A, 0, 10);
         for(int i=0;i<10;i++)System.out.println(A[i]);

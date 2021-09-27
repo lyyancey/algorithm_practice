@@ -1,5 +1,3 @@
-import jdk.nashorn.api.tree.Tree;
-
 class Problem106{
     public TreeNode buildTree(int[] inorder, int[] postorder){
         return build(inorder, 0, inorder.length-1, postorder, 0,postorder.length-1);

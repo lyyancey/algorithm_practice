@@ -13,7 +13,7 @@ class Problem435{
                 return 0;
             }
         });
-        int ans=0;
+        int ans=1;
         int startEnd = intervals[0][1];
         for(int[] x:intervals){
             if(x[0]>=startEnd){

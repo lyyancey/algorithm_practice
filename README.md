@@ -11,3 +11,4 @@
 
 ### [重新刷了一遍题](./doc/重刷索引.md)
 
+![Alt](https://repobeats.axiom.co/api/embed/e8d90bbe9e0c48b22ef6e32e8c00d9e521bd3acb.svg "Repobeats analytics image")

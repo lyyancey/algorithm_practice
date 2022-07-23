@@ -3,5 +3,5 @@ C/*.exe
 Java/*.class
 .idea/*
 *.iml
-./**/.idea/*
-*/*.go
+*/.idea/*
+go/*.go

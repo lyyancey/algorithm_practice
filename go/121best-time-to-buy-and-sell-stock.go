@@ -17,3 +17,13 @@ func max(x, y int) int {
 	}
 	return y
 }
+func maxProfit_k_1(price []int) int {
+	n := len(price)
+	var dp_i_0, dp_i_1 int = 0, -price[0]
+	for i := 1; i < n; i++ {
+		dp_i_0 = max(dp_i_0, dp_i_1+price[i])
+		dp_i_1 = max(dp_i_1, -price[i])
+	}
+	return dp_i_0
+
+}

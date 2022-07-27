@@ -4,4 +4,3 @@ Java/*.class
 .idea/*
 *.iml
 */.idea/*
-go/*.go

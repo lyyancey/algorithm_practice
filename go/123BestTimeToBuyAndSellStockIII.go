@@ -1,6 +1,6 @@
-package BestTimeToBuyAndSellStockIII
+package goalgorithm
 
-func maxProfit(price []int) int {
+func maxProfit_k_2(price []int) int {
 	n := len(price)
 	dp := make([][3][2]int, n)
 	dp[0][1][0], dp[0][1][1] = 0, -price[0]
@@ -23,10 +23,4 @@ func maxProfit_with_limit(price []int) int {
 		dp_i11 = max(dp_i11, -price[i])
 	}
 	return dp_i20
-}
-func max(x, y int) int {
-	if x >= y {
-		return x
-	}
-	return y
 }

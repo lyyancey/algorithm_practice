@@ -1,4 +1,4 @@
-package maxProfit
+package goalgorithm
 
 func maxProfit122(price []int) int {
 	n := len(price)
@@ -11,12 +11,6 @@ func maxProfit122(price []int) int {
 	return dp[n-1][0]
 }
 
-func max(i int, i2 int) int {
-	if i > i2 {
-		return i
-	}
-	return i2
-}
 func maxProfit_k_inf(price []int) int {
 	n := len(price)
 	var dp_i_0, dp_i_1 int = 0, -price[0]

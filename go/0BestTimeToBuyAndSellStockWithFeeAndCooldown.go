@@ -1,5 +1,5 @@
 //package BestTimeToBuyAndSellStockWithFeeAndCooldown
-package BestTimeToBuyAndSellStock
+package goalgorithm
 
 func maxProfitAllInOne(prices []int, maxK, cooldown, fee int) int {
 	n := len(prices)
@@ -53,10 +53,4 @@ func maxProfitwithKInf(prices []int, cooldown int, fee int) int {
 		dp[i][1] = max(dp[i-1][1], dp[i-cooldown-1][0]-prices[i]-fee)
 	}
 	return dp[n-1][0]
-}
-func max(x, y int) int {
-	if x >= y {
-		return x
-	}
-	return y
 }

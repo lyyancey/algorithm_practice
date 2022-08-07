@@ -1,6 +1,6 @@
-package maxProfit
+package goalgorithm
 
-func maxProfit(price []int) int {
+func maxProfit_k_1v1(price []int) int {
 	n := len(price)
 	dp := make([][2]int, n)
 	dp[0][0] = 0
@@ -10,12 +10,6 @@ func maxProfit(price []int) int {
 		dp[i][1] = max(dp[i-1][1], -price[i])
 	}
 	return dp[n-1][0]
-}
-func max(x, y int) int {
-	if x >= y {
-		return x
-	}
-	return y
 }
 func maxProfit_k_1(price []int) int {
 	n := len(price)

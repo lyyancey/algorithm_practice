@@ -1,6 +1,6 @@
-package BestTimeToBuyAndSellStockIV
+package goalgorithm
 
-func maxProfit(max_k int, prices []int) int {
+func maxProfit_k(max_k int, prices []int) int {
 	n := len(prices)
 	if n == 0 {
 		return 0
@@ -46,11 +46,4 @@ func maxProfitInfK(prices []int) int {
 		dp[i][1] = max(dp[i-1][1], dp[i-1][0]-prices[i])
 	}
 	return dp[n-1][0]
-}
-
-func max(x, y int) int {
-	if x >= y {
-		return x
-	}
-	return y
 }

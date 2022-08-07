@@ -1,6 +1,6 @@
-package bestTimeToBuyAndSellStockWithCooldown
+package goalgorithm
 
-func maxProfit(price []int) int {
+func maxProfit_cooldown(price []int) int {
 	n := len(price)
 	if n == 1 {
 		return 0
@@ -26,10 +26,4 @@ func maxProfit_with_cooldown(price []int) int {
 		dp_i_pre = tem
 	}
 	return dp_i_0
-}
-func max(x, y int) int {
-	if x >= y {
-		return x
-	}
-	return y
 }

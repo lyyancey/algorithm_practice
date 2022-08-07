@@ -1,4 +1,4 @@
-package BestTimeToBuyAndSellStockWithTransactionFee
+package goalgorithm
 
 func maxProfit(price []int, fee int) int {
 	n := len(price)
@@ -19,11 +19,4 @@ func maxProfit_with_fee(price []int, fee int) int {
 		dp_i_1 = max(dp_i_1, dp_i_0-price[i]-fee)
 	}
 	return dp_i_0
-}
-
-func max(i1, i2 int) int {
-	if i1 >= i2 {
-		return i1
-	}
-	return i2
 }
